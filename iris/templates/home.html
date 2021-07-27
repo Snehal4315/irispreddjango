@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris prediction</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <h1>Iris Prediction</h1>
+    </div>
+    <div class="form">
+        <form action="result" method="POST">{% csrf_token %}
+            <div class="sl">
+                <input type="number" step="0.1" required="required" placeholder="Sepal length" name='sl'>
+            </div>
+            <div class="sw">
+                <input type="number" step="0.1" required="required" placeholder="Sepal width" name='sw'>
+            </div>
+            <div class="pl">
+                <input type="number" step="0.1" required="required" placeholder="Petal length" name='pl'>
+            </div>
+            <div class="pw">
+                <input type="number" step="0.1" required="required" placeholder="Petal width" name='pw'>
+            </div>
+            <div class="btn">
+                <button type="submit" onclick="check()">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="result">
+        <h1>{{ result }}</h1>
+    </div>
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>
