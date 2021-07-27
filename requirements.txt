@@ -1,4 +1,5 @@
 Django==3.2.5
+Django-decouple==2.1
 gunicorn==20.1.0
 heroku==0.1.4
 Jinja2==2.10.1
