@@ -17,8 +17,10 @@ def result(request):
         features['pw'] = request.POST.get('pw') 
 
         final_features = pd.DataFrame({'x':features}).transpose()
-        model = joblib.load('iris/model/Iris.pkl')
+
+        model = joblib.load('iris/model/irisrf.pkl')
         result = model.predict(final_features)[0]
+        
         iris = ''
 
         if(result == 0):
