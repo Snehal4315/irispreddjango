@@ -29,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['irispreddjango.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['irispreddjango.herokuapp.com','127.0.0.1','localhost']
 
 
 # Application definition
